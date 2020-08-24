@@ -1,8 +1,8 @@
 # The Coding Bootcamp at the University of Texas - 04 Weekly Challenge:
 ##  Web APIs Challenge - Code Quiz
 // ! insert screenshot
-* [Deployed Application](#)
-* [GitHub Repository](#)
+* [Deployed Application](https://sarah-safarzadeh.github.io/code-quiz)
+* [GitHub Repository](https://github.com/Sarah-Safarzadeh/code-quiz)
 ### Challenge Synopsis:
 > A coding bootcamp student wants to take a timed quiz on JavaScript fundamentals that stores high scores, so that they can gauge their progress compared to their peers.
 ### Acceptance Criteria:
