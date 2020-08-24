@@ -4,6 +4,9 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
+var timerEl = document.getElementById('countdown');
+var scores = [];
+
 var shuffledQuestions, currentQuestionIndex;
 
 // event listeners
@@ -126,13 +129,41 @@ const questions = [
     }
 ];
 
-// var count = 45;
-// var timer = setInterval(function() {
-//   document.getElementById('count').innerHTML = count;
-//   count--;
-//   if (count === 0) {
-//     clearInterval(timer);
-//     document.getElementById('count').innerHTML = 'Done';
-//     alert("You're out of time!");
+// Timer
+function countdown() {
+
+    var timeLeft = 45;
+    timerEl.textContent = timeLeft;
+    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+  
+    var timeInterval = setInterval(function() {
+      
+      if(timeLeft > 0) {
+        timeLeft--;
+        timerEl.textContent = timeLeft;
+      }
+      else
+      {
+        timeLeft = 0;
+        timerEl.textContent = "";
+        clearInterval(timeInterval);
+        displayMessage();
+      }
+    }, 1000);
+  }
+  startButton.onclick = countdown;
+
+// Save and Display Scores
+// var saveScore = function () {
+//     localStorage.setItem("scores", JSON.stringify(scores));
 //   }
-// }, 1000);
+  
+//   var showScore = function () {
+//     var savedScores = localStorage.getItem("scores");
+  
+//     if (!savedScores) {
+//       return false;
+//     }
+  
+//     savedScores = JSON.parse(savedScores);
+//   }
