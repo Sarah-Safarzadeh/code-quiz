@@ -83,6 +83,34 @@ const questions = [
             { text: 'String', correct: false },
             { text: 'Booleon', correct: false },
             { text: 'Cork', correct: true },
+        ],
+        question: 'What are variables used for in JavaScript Programs?',
+        answers: [
+            { text: 'Add styling to HTML', correct: false },
+            { text: 'Nothing', correct: false },
+            { text: 'Storing numbers, dates, or other values', correct: true },
+            { text: 'None of the above', correct: false },
+        ],
+        question: "What is the correct JavaScript syntax to write 'Hello World'?",
+        answers: [
+            { text: 'response.write("Hello World")', correct: false },
+            { text: 'println("Hello World")', correct: false },
+            { text: 'document.write("Hello World")', correct: true },
+            { text: 'cursive.input("Hello World")', correct: false },
+        ],
+        question: 'Inside which HTML element do we put the JavaScript?',
+        answers: [
+            { text: '<js>', correct: false },
+            { text: '<script>', correct: true },
+            { text: '<javascript>', correct: false },
+            { text: '<linkjs>', correct: false },
+        ],
+        question: 'Which of the following is not considered a JavaScript operator?',
+        answers: [
+            { text: 'this', correct: true },
+            { text: 'delete', correct: false },
+            { text: 'new', correct: false },
+            { text: 'typeof', correct: false },
         ]
     }
 ]
