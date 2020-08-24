@@ -38,7 +38,8 @@ function showQuestion(question) {
     })
 }
 
-function resetState {
+function resetState() {
+    clearStatusClass(document.body);
     nextButton.classList.add('hide');
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -52,7 +53,12 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    nextButton.classList.remove('hide');
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide');
+    } else {
+        startButton.innerText = 'Restart!'
+        startButton.classList.remove('hide');
+    }
 }
 
 function setStatusClass(element,correct) {
