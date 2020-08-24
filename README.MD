@@ -1,6 +1,6 @@
 # The Coding Bootcamp at the University of Texas - 04 Weekly Challenge
 ##  Web APIs Challenge - Code Quiz
-// ! insert screenshot
+!(./assets/screenshot.png)
 * [Deployed Application](https://sarah-safarzadeh.github.io/code-quiz)
 * [GitHub Repository](https://github.com/Sarah-Safarzadeh/code-quiz)
 ### Challenge Synopsis:
