@@ -134,7 +134,7 @@ function countdown() {
 
     var timeLeft = 45;
     timerEl.textContent = timeLeft;
-    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    // `setInterval()` method to call a function to be executed every 1000 milliseconds
   
     var timeInterval = setInterval(function() {
       
@@ -147,7 +147,6 @@ function countdown() {
         timeLeft = 0;
         timerEl.textContent = "";
         clearInterval(timeInterval);
-        displayMessage();
       }
     }, 1000);
   }
