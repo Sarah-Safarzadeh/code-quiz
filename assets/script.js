@@ -3,14 +3,16 @@ const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+
 var shuffledQuestions, currentQuestionIndex;
 
+// event listeners
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 })
-
+// Start Game Function
 function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -37,7 +39,7 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
     })
 }
-
+// Reset
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
@@ -60,8 +62,8 @@ function selectAnswer(e) {
         startButton.classList.remove('hide');
     }
 }
-
-function setStatusClass(element,correct) {
+// Wrong or Right Styles
+function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct');
@@ -75,6 +77,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
+// Questions
 const questions = [
     {
         question: 'Which of the following is not a JavaScipt Data type?',
@@ -122,3 +125,14 @@ const questions = [
         ]
     }
 ];
+
+// var count = 45;
+// var timer = setInterval(function() {
+//   document.getElementById('count').innerHTML = count;
+//   count--;
+//   if (count === 0) {
+//     clearInterval(timer);
+//     document.getElementById('count').innerHTML = 'Done';
+//     alert("You're out of time!");
+//   }
+// }, 1000);

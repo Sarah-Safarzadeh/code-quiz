@@ -30,19 +30,21 @@ body.wrong {
 }
 
 .container {
-    width: 800;
-    max-width: 80%;
+    width: fit-content;
+    height: fit-content;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    text-align: center;
 }
 
 .btn-grid {
     display: flex;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 20px 0;
+    margin: 10px 0;
+    justify-content: center;
 }
 
 .btn {
