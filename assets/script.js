@@ -153,16 +153,16 @@ function countdown() {
   startButton.onclick = countdown;
 
 // Save and Display Scores
-// var saveScore = function () {
-//     localStorage.setItem("scores", JSON.stringify(scores));
-//   }
+var saveScore = function () {
+    localStorage.setItem("scores", JSON.stringify(scores));
+  }
   
-//   var showScore = function () {
-//     var savedScores = localStorage.getItem("scores");
+  var showScore = function () {
+    var savedScores = localStorage.getItem("scores");
   
-//     if (!savedScores) {
-//       return false;
-//     }
+    if (!savedScores) {
+      return false;
+    }
   
-//     savedScores = JSON.parse(savedScores);
-//   }
+    savedScores = JSON.parse(savedScores);
+  }
